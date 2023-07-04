@@ -9,7 +9,7 @@ export default function EducationForm({handleChange,handleDelete,id,email,instit
             <form className='education-form'>
                 <div className='qualification'>
                 <input 
-                onChange={handleChange}
+                onChange={(e) => handleChange(e, id)}
                 value={qualification}
                 
                  type="text" 
@@ -19,7 +19,7 @@ export default function EducationForm({handleChange,handleDelete,id,email,instit
 
                 <div>
                 <input 
-                onChange={handleChange}
+                onChange={(e) => handleChange(e, id)}
                 value = {institution}
                 
                 type="text" 
@@ -29,7 +29,7 @@ export default function EducationForm({handleChange,handleDelete,id,email,instit
 
                 <div>
                 <input 
-                onChange={handleChange}
+                onChange={(e) => handleChange(e, id)}
                 value={email}
                 
                 type="email" 
@@ -39,7 +39,7 @@ export default function EducationForm({handleChange,handleDelete,id,email,instit
 
                 <div>
                 <input 
-                onChange={handleChange}
+                onChange={(e) => handleChange(e, id)}
                 value={start}
                 
                 name = 'start'
@@ -49,7 +49,7 @@ export default function EducationForm({handleChange,handleDelete,id,email,instit
 
                 <div>   
                     <input 
-                    onChange={handleChange}
+                    onChange={(e) => handleChange(e, id)}
                     value={end}
                     
                     name = 'end'

@@ -15,8 +15,7 @@ export default function Education(){
     })
 
     function handleSubmit(e){
-      console.log("handling submit")
-        e.preventDefault()
+      e.preventDefault()
        setEducation((prevState)=>({
         ...prevState,
         editmode:false
@@ -29,70 +28,39 @@ export default function Education(){
         const {name,value} = e.target; //destructure e.target
         setEducation((prevState)=>({
             ...prevState,
-            editmode:true
+            editmode:true,
+            [name] :value
+
         })
         )
         console.log('change in education')
     }
-    function handleChange(e) {
+    function handleChange(e,id) {
       const { name, value } = e.target;
       setEducation((prevState) => ({
         ...prevState,
         editmode: true,
-        degreeArray: education.degreeArray.map((degree) => ({
+        degreeArray: education.degreeArray.map((degree) => 
+        degree.id == id ?{
           ...degree,
-          [name]: value,
-        })),
+          [name] :value
+        } : degree
+
+          ),
       }));
       console.log("handling change");
-      console.log(e.target);
-    }
-    
-    
-    /* 
-      handleAddNew = () => {
-        this.setState({
-            editMode: true,
-            degreeArr: this.state.degreeArr.concat({
-                school: "",
-                title: "",
-                date: "",
-                id: uniqid(),
-            })
-        })
-    }
-    
-  function handleaddTask(text){
-    const atask = {
-      id: uniqid(),
-      text
       
     }
-    setActualTasks([atask,...actualtasks])
     
-  }
-  function handleDelete(id){
-    setActualTasks(
-      actualtasks.filter(atask=> atask.id !==id)
-    )
-  }
-
-  handleDelete = (e) => {
-        this.setState({
-            editMode: true,
-            degreeArr: this.state.degreeArr.filter(degree => {
-                return degree.id !== e.target.className ; 
-            })
-        })
-    }
-    const id = e.currentTarget.id;
-    */
+    
     function handleDelete(id) {
       console.log("handling delete");
       
-    
+    console.log(education.degreeArray[0].id)
+    console.log('and the id is')
+    console.log(id)
       setEducation((prevState) => {
-        const updatedDegreeArray = education.degreeArray.filter((degree) => degree.id !== id);
+        const updatedDegreeArray = prevState.degreeArray.filter((degree) => degree.id !== id);
     
         return {
           ...prevState,
@@ -100,7 +68,7 @@ export default function Education(){
           degreeArray: updatedDegreeArray,
         };
       });
-    
+      console.log(education.degreeArray)
       
     }
     
@@ -128,9 +96,9 @@ export default function Education(){
   const editModeContent = (
               <>
               {
-                degreeArray.map(item=>{
-                  return <EducationForm
-                              handleChange = {handleChange} //check to see if state apllies
+                degreeArray.map(item=>(
+                   <EducationForm
+                              handleChange = {handleChange} 
                               handleDelete = {handleDelete}
                               key = {item.id}
                               institution = {item.institution}
@@ -138,8 +106,9 @@ export default function Education(){
                               qualification = {item.qualification}
                               start ={item.start}
                               end ={item.end}
+                              id= {item.id}
                             />
-                })
+                ))
                 //is this state
               }
               <hr />
@@ -151,7 +120,20 @@ export default function Education(){
 
 const submitModeContent = (
                     <>
-                    <p>submitted education content</p>
+                    
+                    {
+                      degreeArray.map( item=>{
+                        return (
+                        <div>
+                          <p>{item.qualification}</p>
+                          <p>{item.institution}</p>
+                          <p>{item.email}</p>
+                         <p>{item.start}</p>
+                          <p>{item.end}</p>
+                        </div>
+                        )
+                      })
+                    }
                     <button onClick={handleEdit}>EDIT</button>
                     </>
 )
