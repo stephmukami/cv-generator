@@ -123,6 +123,7 @@ const submitModeContent = (
                         return (
                         <div className='parentEducation-submit' key={item.id}>
                           <div className='ed-school-submit'>
+                            <h5>Education and Training</h5>
                           <p> {item.qualification}</p>
                           <p>{item.institution}</p>
                           <p>{item.email}</p>
@@ -139,7 +140,7 @@ const submitModeContent = (
                         )
                       })
                     }
-                    <button className='eduEdit-submit' onClick={handleEdit}>EDIT</button>
+                    <button className='eduEdit-submit hide' onClick={handleEdit}>EDIT</button>
                     </>
 )
 

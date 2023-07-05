@@ -112,6 +112,7 @@ export default function Experience(){
                 return (
                     <div className='parentExp-submit' key={item.id}>
                             <div className='exp-details'>
+                            <h5>Work Experience</h5>
                                 <p>{item.occupation}</p>
                                 <p>{item.employer}</p>
                                 
@@ -132,7 +133,7 @@ export default function Experience(){
 
             )
          }
-         <button className='expBtn-edit' onClick={handleEdit}>EDIT</button>
+         <button className='expBtn-edit hide' onClick={handleEdit}>EDIT</button>
         </>
     )
 

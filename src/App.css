@@ -305,7 +305,7 @@ margin-top: -9px;
   }
   /* FORMATTING OF SUBMITTED CONTENT*/
   .personal-submit{
-    border:1px solid red;
+    border-bottom: 1px solid black;
     padding: 5px;
     margin: 0px;
     height: 110px;
@@ -335,14 +335,14 @@ margin-top: -9px;
     transition: all .3s ease;
     margin-left: 600px;
     position: relative;
-    bottom:90px;
+    bottom:40px;
   }
   .personalEdit-submit:hover{
     transform: translateY(2px);
      transition: 200ms;
     }
     .parentEducation-submit{
-      border: 1px solid red;
+      
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -353,11 +353,11 @@ margin-top: -9px;
     }
     .ed-dates-submit{
       font-size: 14px;
-      border: 1px solid rgb(65, 58, 58);
+      
     }
     .ed-school-submit{
       font-size: 15px;
-      border: 1px solid rgb(65, 58, 58);
+      
      line-height: 10px;
     }
     .eduEdit-submit{
@@ -396,7 +396,7 @@ margin-top: -9px;
       border-bottom: 1px solid #53ACF3;
     }
     .parentExp-submit{
-      border: 1px solid red;
+      
       display: flex;
       justify-content: space-between;
       padding: 10px;
@@ -407,15 +407,17 @@ margin-top: -9px;
       border-bottom: 1px solid black;
     }
     .exp-dates{
-      border: 1px solid pink;
+     
       display: flex;
+      min-width: 200px;
+      margin-left: 10px;
       
     }
     .exp-dates p{
       margin: 2px;
     }
-    .exp-details{
-      border:1px solid green;
+    .hide{
+      
     }
     .expBtn-edit{
       width:60px;

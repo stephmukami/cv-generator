@@ -39,7 +39,13 @@ export default function PersonalBg(){
  const {firstname,lastname,phone,email} = personal
    const editModeContent = (
    
+    
     <div className="personal-container form-format">
+
+<div className="nav-container">
+        <h1 >CV GENERATOR</h1>
+    </div>
+
     <h3 className='section'>Personal Background</h3>
 
     <form className='personal-form'  onSubmit={handleSubmit}>
@@ -97,8 +103,8 @@ export default function PersonalBg(){
        
         <div className='personal-submit'>
         <h4 className='names-submit'>{firstname} {personal.lastname} </h4>
-        <p className='details-submit'>Phone: {personal.phone} <pre></pre> Email: {personal.email}</p>
-        <button className=' personalEdit-submit' onClick={handleEdit}>EDIT</button>
+        <p className='details-submit'>Phone: {personal.phone} <br />Email: {personal.email}</p>
+        <button className=' personalEdit-submit hide' onClick={handleEdit}>EDIT</button>
     </div>
      
     )
