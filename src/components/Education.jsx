@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import EducationForm from './EducationForm'
 import uniqid from 'uniqid'
 export default function Education(){
+  // editmode could have been different state to isolate its altering in handleSubmit and handleEdit
     const [education,setEducation] = useState({
       editmode: true,
       degreeArray:[{
@@ -20,13 +21,12 @@ export default function Education(){
         ...prevState,
         editmode:false
        }))
-        console.log("submitted education")
+        
      }
 
-     function handleEdit(e){
-      console.log("handling edit")
-        const {name,value} = e.target; //destructure e.target
-        setEducation((prevState)=>({
+     function handleEdit(e){ // could have managed editmode only if separate piece of state as handleChange does updates too
+      const {name,value} = e.target; //destructure e.target
+        setEducation( (prevState)=>({
             ...prevState,
             editmode:true,
             [name] :value
@@ -39,8 +39,8 @@ export default function Education(){
       const { name, value } = e.target;
       setEducation((prevState) => ({
         ...prevState,
-        editmode: true,
-        degreeArray: education.degreeArray.map((degree) => 
+        editmode: true, //can add education.degreeArray
+        degreeArray: degreeArray.map((degree) => 
         degree.id == id ?{
           ...degree,
           [name] :value
@@ -48,24 +48,18 @@ export default function Education(){
 
           ),
       }));
-      console.log("handling change");
+      
       
     }
     
     
     function handleDelete(id) {
-      console.log("handling delete");
-      
-    console.log(education.degreeArray[0].id)
-    console.log('and the id is')
-    console.log(id)
       setEducation((prevState) => {
-        const updatedDegreeArray = prevState.degreeArray.filter((degree) => degree.id !== id);
-    
+       // const updatedDegreeArray = prevState.degreeArray.filter((degree) => degree.id !== id);
         return {
           ...prevState,
           editmode: true,
-          degreeArray: updatedDegreeArray,
+          degreeArray: degreeArray.filter((degree) => degree.id !== id) //then put the updatedDegreeArray
         };
       });
       console.log(education.degreeArray)
@@ -88,7 +82,7 @@ export default function Education(){
     setEducation((prevState)=>({
         ...prevState,
         editmode:true,
-        degreeArray: [...education.degreeArray,newDegree]
+        degreeArray: [...degreeArray,newDegree]
     }))
    }
 
@@ -109,11 +103,14 @@ export default function Education(){
                               id= {item.id}
                             />
                 ))
-                //is this state
+                
               }
-              <hr />
-              <button onClick={handleAddNew}>ADD</button> 
+            <br />
+            <div className='doubleBtn-edit'>
+            <button onClick={handleAddNew}>ADD</button> 
               <button onClick={handleSubmit}>SUBMIT</button>
+            </div>
+              
               </>
 
   )
@@ -124,17 +121,25 @@ const submitModeContent = (
                     {
                       degreeArray.map( item=>{
                         return (
-                        <div>
-                          <p>{item.qualification}</p>
+                        <div className='parentEducation-submit' key={item.id}>
+                          <div className='ed-school-submit'>
+                          <p> {item.qualification}</p>
                           <p>{item.institution}</p>
                           <p>{item.email}</p>
-                         <p>{item.start}</p>
-                          <p>{item.end}</p>
+                          </div>
+
+                          <div className='ed-dates-submit'>
+                          <p>{item.start} : {item.end}</p>
+                          
+                          </div>
+                          
+                          
+                         
                         </div>
                         )
                       })
                     }
-                    <button onClick={handleEdit}>EDIT</button>
+                    <button className='eduEdit-submit' onClick={handleEdit}>EDIT</button>
                     </>
 )
 

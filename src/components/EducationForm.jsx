@@ -11,7 +11,6 @@ export default function EducationForm({handleChange,handleDelete,id,email,instit
                 <input 
                 onChange={(e) => handleChange(e, id)}
                 value={qualification}
-                
                  type="text" 
                  name = 'qualification'
                  placeholder='Title of qualification awarded' />
@@ -21,7 +20,6 @@ export default function EducationForm({handleChange,handleDelete,id,email,instit
                 <input 
                 onChange={(e) => handleChange(e, id)}
                 value = {institution}
-                
                 type="text" 
                 name = 'institution'
                 placeholder='Institution' />
@@ -31,7 +29,6 @@ export default function EducationForm({handleChange,handleDelete,id,email,instit
                 <input 
                 onChange={(e) => handleChange(e, id)}
                 value={email}
-                
                 type="email" 
                 name = 'email'
                 placeholder='Email Address' />
@@ -41,7 +38,6 @@ export default function EducationForm({handleChange,handleDelete,id,email,instit
                 <input 
                 onChange={(e) => handleChange(e, id)}
                 value={start}
-                
                 name = 'start'
                 type="date" 
                 placeholder='From' />
@@ -51,7 +47,6 @@ export default function EducationForm({handleChange,handleDelete,id,email,instit
                     <input 
                     onChange={(e) => handleChange(e, id)}
                     value={end}
-                    
                     name = 'end'
                     type="date" 
                     placeholder='To' />

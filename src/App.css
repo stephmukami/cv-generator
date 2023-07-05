@@ -118,6 +118,7 @@ transform: translateY(2px);
 .finish-btn:hover{
     transform: translateY(2px);
     transition: 200ms;
+    content: 'Download';
 }
 
 .delete-btn{
@@ -159,8 +160,7 @@ transform: translateY(2px);
     border-radius: 3px;
     border: none;
     margin-left: 10px;
-    margin-top: 2px;
-    margin-bottom: 9px;
+    margin-top: -6px;
     transition: all .3s ease;
 }
 #work-end{
@@ -303,3 +303,132 @@ margin-top: -9px;
     margin-bottom: 9px;
     transition: all .3s ease;
   }
+  /* FORMATTING OF SUBMITTED CONTENT*/
+  .personal-submit{
+    border:1px solid red;
+    padding: 5px;
+    margin: 0px;
+    height: 110px;
+    font-size: 16px;
+  }
+  .names-submit{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 25px;
+    margin: 0px;
+  }
+  .details-submit{
+    margin: 0px;
+    padding: 2px;
+    text-align: center;
+  }
+  .personalEdit-submit{
+    width:60px;
+    height: 30px;
+    color: #FFFFFF;
+    background-color: #53ACF3;
+    border-radius: 3px;
+    border: none;
+    margin-left: 10px;
+    margin-top: 2px;
+    margin-bottom: 9px;
+    transition: all .3s ease;
+    margin-left: 600px;
+    position: relative;
+    bottom:90px;
+  }
+  .personalEdit-submit:hover{
+    transform: translateY(2px);
+     transition: 200ms;
+    }
+    .parentEducation-submit{
+      border: 1px solid red;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      height: 145px;
+      border-bottom: 1px solid black;
+      font-weight: 450;
+    }
+    .ed-dates-submit{
+      font-size: 14px;
+      border: 1px solid rgb(65, 58, 58);
+    }
+    .ed-school-submit{
+      font-size: 15px;
+      border: 1px solid rgb(65, 58, 58);
+     line-height: 10px;
+    }
+    .eduEdit-submit{
+      width:60px;
+      height: 30px;
+      color: #FFFFFF;
+      background-color: #53ACF3;
+      border-radius: 3px;
+      border: none;
+      margin-left: 10px;
+      margin-top: 2px;
+      margin-bottom: 9px;
+      transition: all .3s ease;
+      position: relative;
+      left: 600px;
+      bottom: 35px;
+      
+    }
+    .doubleBtn-edit{ 
+   height: 40px;
+   
+    }
+    .doubleBtn-edit button{
+      width:75px;
+      height: 30px;
+      color: #FFFFFF;
+      background-color: #D72638;
+      border-radius: 3px;
+      border: none;
+      margin-left: 10px;
+      margin-top: 2px;
+      margin-bottom: 9px;
+      transition: all .3s ease;
+    }
+    .parentExp-edit{
+      border-bottom: 1px solid #53ACF3;
+    }
+    .parentExp-submit{
+      border: 1px solid red;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      font-size: 14px;
+      font-weight: 450;
+      align-items: center;
+      margin: 0px;
+      border-bottom: 1px solid black;
+    }
+    .exp-dates{
+      border: 1px solid pink;
+      display: flex;
+      
+    }
+    .exp-dates p{
+      margin: 2px;
+    }
+    .exp-details{
+      border:1px solid green;
+    }
+    .expBtn-edit{
+      width:60px;
+      height: 30px;
+      color: #FFFFFF;
+      background-color: #53ACF3;
+      border-radius: 3px;
+      border: none;
+      margin-left: 10px;
+      margin-top: 2px;
+      margin-bottom: 9px;
+      transition: all .3s ease;
+      position: relative;
+      left: 600px;
+      bottom: 35px;
+    }

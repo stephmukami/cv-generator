@@ -95,13 +95,10 @@ export default function PersonalBg(){
    
     const submitModeContent = (
        
-        <div>
-        
-        <p>{firstname}</p>
-        <p>{personal.lastname}</p>
-        <p>{personal.phone}</p>
-        <p>{personal.email}</p>
-        <button onClick={handleEdit}>EDIT</button>
+        <div className='personal-submit'>
+        <h4 className='names-submit'>{firstname} {personal.lastname} </h4>
+        <p className='details-submit'>Phone: {personal.phone} <pre></pre> Email: {personal.email}</p>
+        <button className=' personalEdit-submit' onClick={handleEdit}>EDIT</button>
     </div>
      
     )
