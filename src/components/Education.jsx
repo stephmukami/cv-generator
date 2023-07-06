@@ -24,7 +24,7 @@ export default function Education(){
         
      }
 
-     function handleEdit(e){ // could have managed editmode only if separate piece of state as handleChange does updates too
+     function handleEdit(e){ // could have managed editmode only as separate piece of state as handleChange does updates too
       const {name,value} = e.target; //destructure e.target
         setEducation( (prevState)=>({
             ...prevState,
@@ -33,7 +33,6 @@ export default function Education(){
 
         })
         )
-        console.log('change in education')
     }
     function handleChange(e,id) {
       const { name, value } = e.target;
@@ -62,7 +61,6 @@ export default function Education(){
           degreeArray: degreeArray.filter((degree) => degree.id !== id) //then put the updatedDegreeArray
         };
       });
-      console.log(education.degreeArray)
       
     }
     

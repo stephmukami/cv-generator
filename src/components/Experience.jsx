@@ -59,6 +59,7 @@ export default function Experience(){
 
         );
     }
+    
    function handleCheckBox(id) {
   setExperienceArray((prevArray) =>
     prevArray.map((item) =>

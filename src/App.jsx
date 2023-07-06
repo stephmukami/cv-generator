@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import Navbar from './components/Navbar'
 import PersonalBg from './components/PersonalBg'
 import Education from './components/Education'
 import Experience from './components/Experience'

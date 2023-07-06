@@ -18,7 +18,7 @@ export default function PersonalBg(){
         [name] :value
     })
     )
-    console.log('change')
+    
 }
 
  function handleSubmit(e){
@@ -27,7 +27,7 @@ export default function PersonalBg(){
     ...prevState,
     editmode:false
    }))
-    console.log("submitted")
+    
  }
 
  function handleEdit(){
@@ -42,9 +42,9 @@ export default function PersonalBg(){
     
     <div className="personal-container form-format">
 
-<div className="nav-container">
-        <h1 >CV GENERATOR</h1>
-    </div>
+        <div className="nav-container">
+            <h1 >CV GENERATOR</h1>
+        </div>
 
     <h3 className='section'>Personal Background</h3>
 
@@ -102,10 +102,10 @@ export default function PersonalBg(){
     const submitModeContent = (
        
         <div className='personal-submit'>
-        <h4 className='names-submit'>{firstname} {personal.lastname} </h4>
-        <p className='details-submit'>Phone: {personal.phone} <br />Email: {personal.email}</p>
-        <button className=' personalEdit-submit hide' onClick={handleEdit}>EDIT</button>
-    </div>
+            <h4 className='names-submit'>{firstname} {personal.lastname} </h4>
+            <p className='details-submit'>Phone: {personal.phone} <br />Email: {personal.email}</p>
+            <button className=' personalEdit-submit hide' onClick={handleEdit}>EDIT</button>
+        </div>
      
     )
  
@@ -115,7 +115,7 @@ export default function PersonalBg(){
      
 
        {personal.editmode ? editModeContent:submitModeContent}
-       {console.log(personal)}
+       
         </>
     )
 }
