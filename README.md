@@ -46,7 +46,7 @@ MIT
 
 ---
 ## Technical Skills Gained
-- Managing sideeffects
+- Managing side-effects
 - Conditional rendering
 - User-centred visual design
 - React application maintainability
