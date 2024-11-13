@@ -11,7 +11,7 @@
   <a href="#tech-skills">Technical Skills Gained</a> •
   <a href="#license">License</a>
 </p>
-<div >
+<div align="center">
   <img src="https://github.com/stephmukami/cv-generator/blob/master/project-pics/cv-gen-1.PNG" alt="cv home page" width="400">
 </div>
 
@@ -19,7 +19,7 @@
 ## Key Features  
 * User Friendly Form
   - Easily enter personal information, work experience, education, skills, and more through a structured, user-friendly interface.
-*Downloadable Doc Format
+* Downloadable Doc Format
   - Generate a downloadable .doc file with a single click for easy editing and sharing.
 ## How To Use
 
@@ -38,16 +38,16 @@ $ npm run dev
 
 > **Note**
 > If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
-
+```
 ## License
 
 MIT
+
+
+---
 ## Technical Skills Gained
 - Managing sideeffects
 - Conditional rendering
 - User-centred visual design
 - React application maintainability
-
-
----
 
