@@ -8,48 +8,32 @@
 <p align="center">
   <a href="#key-features">Key Features</a> •
   <a href="#how-to-use">How To Use</a> •
+  <a href="#tech-skills">Technical Skills Gained</a> •
   <a href="#license">License</a>
 </p>
-<video width="600" controls>
-  <source src="https://raw.githubusercontent.com/stephmukami/iprevent/main/iprevent-gif.gif" type="video/mp4">
-  
-</video>
+<div >
+  <img src="https://github.com/stephmukami/cv-generator/blob/master/project-pics/cv-gen-1.PNG" alt="cv home page" width="400">
+</div>
 
 
-## Key Features
-
-* Authentication and authorization
-  - Create your own account and log in
-* Risk prediction
-  - Fill in information as directed to feed our random forest machine learning model
-  - Find out the percentage risk of being diagnosed with Type 2 diabetes
-* Intepretability Analysis
-  - Get a list of health attributes that contributed to your risk prediction  
-* Relevant recommendations
-  - Obtain some next steps to improve your health habits based on your risk prediction
-*Adherence to responsible computing aspects
-  - Deactivate and delete your account to maintain your privacy
-  - Send a message of ny provacy concerns you have
+## Key Features  
+* User Friendly Form
+  - Easily enter personal information, work experience, education, skills, and more through a structured, user-friendly interface.
+*Downloadable Doc Format
+  - Generate a downloadable .doc file with a single click for easy editing and sharing.
 ## How To Use
 
-To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) [Python](https://www.python.org/downloads/) and [Flask](https://flask.palletsprojects.com/en/stable/installation/) installed on your computer. From your command line:
-
-```bash
 # Clone this repository
-$ git clone https://github.com/stephmukami/iprevent
+$ git clone https://github.com/stephmukami/cv-generator.git
 
 # Go into the repository
-$ cd iprevent
+$ cd cv-generator
 
 # Install dependencies
 $ npm install
 
 # Run the app
-$ npm start
-
-# Run the ml backend
-$ cd server
-$ python app.py
+$ npm run dev 
 ```
 
 > **Note**
@@ -58,6 +42,12 @@ $ python app.py
 ## License
 
 MIT
+## Technical Skills Gained
+- Managing sideeffects
+- Conditional rendering
+- User-centred visual design
+- React application maintainability
+
 
 ---
 
